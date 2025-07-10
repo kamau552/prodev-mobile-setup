@@ -1,18 +1,18 @@
 {
   "expo": {
-    "name": "MyFirstApp",
-    "slug": "my-first-app",
+    "name": "prodev-mobile-app-0x01",
+    "slug": "prodev-mobile-app-0x01",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "prodevmobileapp0x00",
+    "scheme": "prodevmobileapp0x01",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "package": "com.yourname.myfirstapp",  
+      "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
@@ -37,5 +37,6 @@
     ],
     "experiments": {
       "typedRoutes": true
+    }
   }
 }

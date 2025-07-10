@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# prodev-mobile-setup
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Setting Up Expo Go with Orbit on My Windows Machine
 
-## Get started
+This is a quick guide I put together to document how I installed and set up **Expo Go** on my phone and connected it to my React Native development environment using **Orbit** on Windows.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 1. Installed Expo Go on My Phone
 
-2. Start the app
+I visited [https://expo.dev/go](https://expo.dev/go) to download the app.
 
-   ```bash
-   npx expo start
-   ```
+- Chose the latest SDK version available.
+- Clicked **Install for your device**.
+  - Since I’m using Android, I got it from the [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent).
+- After installation, I opened the **Expo Go** app and logged into my account (or you can create one if you don’t have it yet).
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 2. Installed Orbit on Windows
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Next, I went to the official [Orbit page](https://expo.dev/orbit) and installed Orbit on my laptop.
 
-## Get a fresh project
+After installation, I opened it up to get ready for device connection.
 
-When you're ready, run:
+---
 
-```bash
+## 3. Set Up My Phone for USB Debugging
+
+I had to connect my Android phone to my laptop using a USB cable, but first I needed to enable developer options:
+
+- Went to **Settings > About Phone**
+- Tapped the **Build Number** 7 times until I saw the message that developer mode is now enabled.
+
+Then:
+
+- Went into **Developer Options** and turned on **USB Debugging**.
+
+⚠️ When I connected my phone, it asked me to allow USB debugging from this computer — I accepted it.
+
+---
+
+## 4. Connected My Phone to Orbit
+
+After plugging in my phone, I checked that Orbit detected it.
+
+- If it wasn’t showing up at first, I made sure the right device was selected from the dropdown.
+- Once connected, Orbit confirmed the device was ready.
+
+---
+
+## 5. Ready to Test and Run My App
+
+With everything set up:
+- I could now start my React Native app from my terminal or editor.
+- It opened directly on my phone using the **Expo Go** app, thanks to Orbit.
+
+---
+
+## Notes to Remember
+
+- My phone needs to stay connected via USB while testing.
+- If Orbit doesn’t recognize the phone, it might be a driver issue — installing Android USB drivers usually helps.
+
+
+---
+## File format
+app/
+├── (tabs)/
+│   └── index.tsx
+├── constants/
+│   └── Colors.tsx
+
+## Running the App
+- Started the development server:
+
+npx expo start
+On Android: Scanned the QR code using the Expo Go app.
+
+## Resetting the Application
+- Command Used: 
 npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
